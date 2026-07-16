@@ -4,3 +4,9 @@ services:
   postgres:
     image: postgres:latest
     container_name: forum-api-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: forum-api-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
